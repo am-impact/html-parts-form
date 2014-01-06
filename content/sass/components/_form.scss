@@ -43,7 +43,7 @@ textarea{
     width: 100%;
     border: 1px solid $base-ui-color;
     font-family: $body-font-family;
-    @include font-size($body-font-size);
+    font-size: $body-font-size;
     resize: none;
 
     /* Voorkom dat d.m.v. selecteren de inhoud over de verticale as kan schuiven */
