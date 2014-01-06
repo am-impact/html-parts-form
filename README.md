@@ -1,9 +1,9 @@
 html-parts-form
 ===============
 
-Uitbreiding op [html startup](https://github.com/nweevers/html_startup_inuit)
+Uitbreiding op [html startup](https://github.com/nweevers/html-startup)
 
 Bestanden
 ---------
- * content/sass/ui/components/_form.scss
- * scripts/yeah.form.js
+ * content/sass/components/_form.scss
+ * scripts/fw.form.js

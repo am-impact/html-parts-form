@@ -4,13 +4,17 @@
 /**
  * Form elementen
  *
+ * _settings.scss
+ * $placeholder-color: #999
+ * $validation-error-color: #C00
+ *
     <form>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script>
         head.js(
             { cdnform: '//cdn.am-impact.nl/load.js?js=jsfw/form/validation.js&amp;js=jsfw/form/defaultvalue.js' },
-            { form: 'scripts/yeah.form.js' }
+            { form: 'scripts/fw.form.js' }
         );
     </script>
  *
@@ -38,8 +42,8 @@ select,
 textarea{
     width: 100%;
     border: 1px solid $base-ui-color;
-    font-family: $brand-face;
-    @include font-size($base-font-size);
+    font-family: $body-font-family;
+    @include font-size($body-font-size);
     resize: none;
 
     /* Voorkom dat d.m.v. selecteren de inhoud over de verticale as kan schuiven */
@@ -65,11 +69,11 @@ textarea {
 
 
 // Placeholder
-.defaultvalue { text-overflow: ellipsis; color: #999; }
+.defaultvalue { text-overflow: ellipsis; color: $placeholder-color; }
 input[placeholder] { text-overflow: ellipsis; }
-::-moz-placeholder { text-overflow: ellipsis; color: #999; }
-::-webkit-input-placeholder { text-overflow: ellipsis; color: #999; }
-input:-moz-placeholder { text-overflow: ellipsis; color: #999; }
+::-moz-placeholder { text-overflow: ellipsis; color: $placeholder-color; }
+::-webkit-input-placeholder { text-overflow: ellipsis; color: $placeholder-color; }
+input:-moz-placeholder { text-overflow: ellipsis; color: $placeholder-color; }
 
 
 input[type=radio],
@@ -92,13 +96,13 @@ input[type=number].validation_error,
 input[type=password].validation_error,
 select.validation_error,
 textarea.validation_error {
-    border: 1px solid #C00;
+    border: 1px solid $validation-error-color;
 }
 
 label.validation_field_message {
     display: block;
     padding: 0 0 0 5px;
-    color: #C00;
+    color: $validation-error-color;
 }
 
 .buttons {
