@@ -52,11 +52,11 @@ textarea{
     padding: 0 5px;
 
     .no-touch &:hover {
-        border: 1px solid darken($base-ui-color, 10%);
+        border-color: darken($base-ui-color, 10%);
     }
 
     &:focus {
-        border: 1px solid darken($base-ui-color, 20%);
+        border-color: darken($base-ui-color, 20%);
         outline: none;
     }
 }
