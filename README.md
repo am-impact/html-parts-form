@@ -1,7 +1,7 @@
 html-parts-form
 ===============
 
-Uitbreiding op [html startup](https://github.com/nweevers/html-startup)
+Uitbreiding op [html startup](https://github.com/am-impact/html-startup)
 
 Bestanden
 ---------
