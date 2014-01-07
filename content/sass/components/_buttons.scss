@@ -1,0 +1,57 @@
+button,
+.button,
+input[type=submit],
+input[type=reset],
+input[type=button] {
+    @include inline;
+    position: relative;
+    width: auto;
+    padding: 9px 16px;
+    margin: 0;
+    border: {
+        width: 1px;
+        style: solid;
+        color: $primary-color;
+        radius: $global-radius;
+    }
+    line-height: 1;
+    font: {
+        family: $body-font-family;
+        weight: bold;
+        size: $body-font-size;
+    }
+    text: {
+        align: center;
+        decoration: none;
+    }
+    color: #FFF !important;
+    background-color: $primary-color;
+    cursor: pointer;
+    @include transition( all 0.2s ease-in-out );
+
+    .no-touch &:hover {
+        color: #FFF;
+        background-color: lighten($primary-color,10%);
+    }
+}
+
+//
+// Different color
+//
+.button--secondary {
+    color: $primary-color !important;
+    background-color: #FFF;
+
+    .no-touch &:hover {
+        background-color: #EEE;
+    }
+}
+
+
+//
+// Button large
+//
+.button--large {
+    padding: 26px 42px;
+    font-size: $h3-size;
+}
