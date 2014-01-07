@@ -96,7 +96,7 @@ input[type=number].validation_error,
 input[type=password].validation_error,
 select.validation_error,
 textarea.validation_error {
-    border: 1px solid $validation-error-color;
+    border-color: $validation-error-color;
 }
 
 label.validation_field_message {
