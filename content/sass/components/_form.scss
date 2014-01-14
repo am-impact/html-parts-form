@@ -105,10 +105,6 @@ label.validation_field_message {
     color: $validation-error-color;
 }
 
-.buttons {
-    margin-top: 1em;
-}
-
 .required {
     &:after {
         content: '\002A';
