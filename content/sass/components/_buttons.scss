@@ -33,6 +33,13 @@ input[type=button] {
         color: #FFF;
         background-color: lighten($primary-color,10%);
     }
+
+    //
+    // Button container voor meerdere buttons
+    //
+    .button__row & {
+        margin: 0 5px 0 0;
+    }
 }
 
 //
@@ -54,4 +61,15 @@ input[type=button] {
 .button--large {
     padding: 26px 42px;
     font-size: $h3-size;
+}
+
+
+//
+// Button container
+//
+.button__row {
+    @include grid-column(
+        $columns: 8,
+        $offset: 4
+    );
 }
