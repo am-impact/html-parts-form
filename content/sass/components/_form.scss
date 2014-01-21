@@ -52,11 +52,12 @@ textarea {
 
 
 // Placeholder
-.defaultvalue { text-overflow: ellipsis; color: $placeholder-color; }
 input[placeholder] { text-overflow: ellipsis; }
+.defaultvalue { text-overflow: ellipsis; color: $placeholder-color; }
 ::-moz-placeholder { text-overflow: ellipsis; color: $placeholder-color; }
 ::-webkit-input-placeholder { text-overflow: ellipsis; color: $placeholder-color; }
 input:-moz-placeholder { text-overflow: ellipsis; color: $placeholder-color; }
+input:-ms-input-placeholder { text-overflow: ellipsis; color: $placeholder-color; }
 
 
 input[type=radio],
