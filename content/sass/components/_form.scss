@@ -1,13 +1,21 @@
 fieldset {
-    border: 0;
     margin: 0;
     padding: 0;
+    border: 0;
+    // Chrome and Firefox set a `min-width: -webkit-min-content;` on fieldsets,
+    // so we reset that to ensure it behaves more like a standard block element.
+    // See https://github.com/twbs/bootstrap/issues/12359.
+    min-width: 0;
 }
 
 legend {
     @extend .visuallyhidden;
 }
 
+
+//
+// Input elementent
+//
 input[type="text"],
 input[type="password"],
 input[type="datetime"],
@@ -22,7 +30,7 @@ input[type="url"],
 input[type="search"],
 input[type="tel"],
 select,
-textarea{
+textarea {
     width: 100%;
     border: 1px solid $base-ui-color;
     font-family: $body-font-family;
@@ -44,14 +52,26 @@ textarea{
     }
 }
 
-select { padding: 5px; line-height: 10px; }
+select {
+    padding: 5px;
+    line-height: 10px;
+}
+
 textarea {
     overflow: auto;
     resize: vertical;
 }
 
+input[type=radio],
+input[type=checkbox] {
+    padding: 0;
+    border: none;
+}
 
+
+//
 // Placeholder
+//
 input[placeholder] { text-overflow: ellipsis; }
 .defaultvalue { text-overflow: ellipsis; color: $placeholder-color; }
 ::-moz-placeholder { text-overflow: ellipsis; color: $placeholder-color; }
@@ -60,41 +80,25 @@ input:-moz-placeholder { text-overflow: ellipsis; color: $placeholder-color; }
 input:-ms-input-placeholder { text-overflow: ellipsis; color: $placeholder-color; }
 
 
-input[type=radio],
-input[type=checkbox] {
-    padding: 0;
-    border: none;
-}
-
-// // Firefox fix
-// input::-moz-focus-inner {
-//     border: 0;
-//     padding: 0;
-//     margin-top: -2px;
-//     margin-bottom: -2px;
-// }
-
-input[type=text].validation_error,
-input[type=email].validation_error,
-input[type=number].validation_error,
-input[type=password].validation_error,
-select.validation_error,
-textarea.validation_error {
-    border-color: $validation-error-color;
-}
-
-label.validation_field_message {
-    display: block;
-    padding: 0 0 0 5px;
-    color: $validation-error-color;
-}
-
+//
+// Validatie
+//
 .required {
     &:after {
         content: '\002A';
         padding: 0 0 0 5px;
         font-weight: bold;
     }
+}
+
+.validation_error {
+    border-color: $validation-error-color;
+}
+
+.validation_field_message {
+    display: block;
+    padding: 0 0 0 5px;
+    color: $validation-error-color;
 }
 
 
