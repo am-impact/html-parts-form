@@ -32,9 +32,9 @@ input[type="tel"],
 select,
 textarea {
     width: 100%;
-    border: 1px solid $base-ui-color;
-    font-family: $body-font-family;
-    font-size: $body-font-size;
+    border: 1px solid color(ui);
+    font-family: $base-font;
+    font-size: size(body);
     resize: none;
 
     /* Voorkom dat d.m.v. selecteren de inhoud over de verticale as kan schuiven */
@@ -43,11 +43,11 @@ textarea {
     padding: 0 5px;
 
     .no-touch &:hover {
-        border-color: darken($base-ui-color, 10%);
+        border-color: darken(color(ui), 10%);
     }
 
     &:focus {
-        border-color: darken($base-ui-color, 20%);
+        border-color: darken(color(ui), 20%);
         outline: none;
     }
 }
@@ -73,11 +73,11 @@ input[type=checkbox] {
 // Placeholder
 //
 input[placeholder] { text-overflow: ellipsis; }
-.defaultvalue { text-overflow: ellipsis; color: $placeholder-color; }
-::-moz-placeholder { text-overflow: ellipsis; color: $placeholder-color; }
-::-webkit-input-placeholder { text-overflow: ellipsis; color: $placeholder-color; }
-input:-moz-placeholder { text-overflow: ellipsis; color: $placeholder-color; }
-input:-ms-input-placeholder { text-overflow: ellipsis; color: $placeholder-color; }
+.defaultvalue { text-overflow: ellipsis; color: color(placeholder,form); }
+::-moz-placeholder { text-overflow: ellipsis; color: color(placeholder,form); }
+::-webkit-input-placeholder { text-overflow: ellipsis; color: color(placeholder,form); }
+input:-moz-placeholder { text-overflow: ellipsis; color: color(placeholder,form); }
+input:-ms-input-placeholder { text-overflow: ellipsis; color: color(placeholder,form); }
 
 
 //
@@ -92,13 +92,13 @@ input:-ms-input-placeholder { text-overflow: ellipsis; color: $placeholder-color
 }
 
 .validation_error {
-    border-color: $validation-error-color;
+    border-color: color(error,form);
 }
 
 .validation_field_message {
     display: block;
     padding: 0 0 0 5px;
-    color: $validation-error-color;
+    color: color(error,form);
 }
 
 

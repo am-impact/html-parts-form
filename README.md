@@ -51,8 +51,12 @@ Uitbreiding op [html startup](https://github.com/am-impact/html-startup)
     </script>
 ### Scss
 ###### _settings.scss
-	$placeholder-color: #999
- 	$validation-error-color: #C00
+    $colors: (
+        form: (
+            placeholder: #999,
+            error: #C00
+        )
+    )
 
 ### Javascript
 ###### Validatie aanroepen
