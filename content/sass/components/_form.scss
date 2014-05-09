@@ -110,25 +110,30 @@ form {
 }
 
 .form__row {
-    @include grid-row( $behavior: collapse );
     margin: 5px 0;
 
-    .label {
-        @include grid-column(
-            $columns: 4
-        );
-    }
+    @media #{$small-up} {
+        @include grid-row( $behavior: collapse );
 
-    .field {
-        @include grid-column(
-            $columns: 8
-        );
+        .label {
+            @include grid-column(
+                $columns: 4
+            );
+        }
+
+        .field {
+            @include grid-column(
+                $columns: 8
+            );
+        }
     }
 }
 
 .form__note {
-    @include grid-column(
-        $columns: 8,
-        $offset: 4
-    );
+    @media #{$small-up} {
+        @include grid-column(
+            $columns: 8,
+            $offset: 4
+        );
+    }
 }

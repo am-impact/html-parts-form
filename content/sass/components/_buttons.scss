@@ -60,4 +60,17 @@
         padding: 26px 42px;
         font-size: size(h3);
     }
+
+
+    //
+    // Row
+    //
+    &__row {
+        @media #{$small-up} {
+            @include grid-column(
+                $columns: 8,
+                $offset: 4
+            );
+        }
+    }
 }
