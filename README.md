@@ -81,3 +81,14 @@ Uitbreiding op [html startup](https://github.com/am-impact/html-startup)
 			$input.attr('value', $this.val() );
 		}
 	});
+
+###### Checkbox validatie
+    $('.contactform').find('input[type=checkbox]').on('change', function() {
+        var $this = $(this),
+            $input = $('.contactform').find('input[data-checkname="' + $this.attr('name').replace('[]', '') + '"]'),
+            checkedCount = $('.contactform').find('input[name="' + $this.attr('name') + '"]:checked').length;
+
+        if( $input.length ) {
+            $input.attr('value', (checkedCount > 0 ? '1' : ''));
+        }
+    });
