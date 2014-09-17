@@ -3,9 +3,9 @@
 Uitbreiding op [html startup](https://github.com/am-impact/html-startup)
 
 ## Bestanden
- * content/sass/components/_buttons.scss
- * content/sass/components/_form.scss
- * scripts/fw.form.js
+ * resources/sass/components/_buttons.scss
+ * resources/sass/components/_form.scss
+ * resources/scripts/fw.form.js
 
 ## Voorbeelden
 
