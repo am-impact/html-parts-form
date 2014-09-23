@@ -1,3 +1,10 @@
+$colors: map-merge($colors, (
+    form: (
+        placeholder: #999,
+        error: #C00
+    )
+));
+
 fieldset {
     margin: 0;
     padding: 0;

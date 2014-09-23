@@ -5,7 +5,6 @@ Uitbreiding op [html startup](https://github.com/am-impact/html-startup)
 ## Bestanden
  * resources/sass/components/_buttons.scss
  * resources/sass/components/_form.scss
- * resources/scripts/fw.form.js
 
 ## Voorbeelden
 
@@ -49,16 +48,17 @@ Uitbreiding op [html startup](https://github.com/am-impact/html-startup)
             { form: 'scripts/fw.form.js' }
         );
     </script>
-### Scss
-###### _settings.scss
-    $colors: (
-        form: (
-            placeholder: #999,
-            error: #C00
-        )
-    )
 
 ### Javascript
+###### Default value fallback
+    if(!Modernizr.input.placeholder) {
+        head.ready('cdnform', function() {
+            $("[placeholder]").each(function() {
+                $(this).defaultvalue();
+            });
+        });
+    }
+
 ###### Validatie aanroepen
     $('.frm-contact').formValidation({
         attrPlaceholder: 'placeholder'
