@@ -44,8 +44,7 @@ Uitbreiding op [html startup](https://github.com/am-impact/html-startup)
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script>
         head.js(
-            { cdnform: '//cdn.am-impact.nl/load.js?js=jsfw/form/validation.js&amp;js=jsfw/form/defaultvalue.js' },
-            { form: 'scripts/fw.form.js' }
+            { cdnform: '//cdn.am-impact.nl/load.js?js=jsfw/form/validation.js&amp;js=jsfw/form/defaultvalue.js' }
         );
     </script>
 
