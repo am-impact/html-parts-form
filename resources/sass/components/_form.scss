@@ -1,5 +1,6 @@
 $colors: map-merge($colors, (
     form: (
+        input: #FFF,
         placeholder: #999,
         error: #C00
     )
@@ -39,15 +40,12 @@ input[type="tel"],
 select,
 textarea {
     width: 100%;
+    padding: 5px;
     border: 1px solid color(ui);
     font-family: $base-font;
     font-size: size(body);
     resize: none;
-
-    /* Voorkom dat d.m.v. selecteren de inhoud over de verticale as kan schuiven */
-    min-height: 28px;
-    line-height: 20px;
-    padding: 0 5px;
+    background: color(input,form);
 
     .no-touch &:hover {
         border-color: darken(color(ui), 10%);
