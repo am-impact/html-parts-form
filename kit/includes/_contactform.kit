@@ -26,11 +26,15 @@
     </fieldset>
     <p class="form__note">Velden met een * zijn verplicht</p>
     <div class="button__row">
-        <input type="submit" name="verzenden" value="Verzenden">
+        <button class="button" type="submit" name="verzenden">Verzenden</button>
     </div>
 </form>
 
 <script>
+    head.ready('cdnform', function() {
+        $('.frm-contact').formValidation();
+    });
+
     head.js(
         { cdnform: '//cdn.am-impact.nl/load.js?js=jsfw/form/validation.js&amp;js=jsfw/form/defaultvalue.js' }
     );
