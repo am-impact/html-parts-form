@@ -112,11 +112,13 @@ input:-ms-input-placeholder { text-overflow: ellipsis; color: color(placeholder,
 //
 form {
     @extend .clearfix;
+
+    li {
+        padding: 8px 0;
+    }
 }
 
 .form__row {
-    margin: 5px 0;
-
     @media #{$small-up} {
         @include grid-row( $behavior: collapse );
 
