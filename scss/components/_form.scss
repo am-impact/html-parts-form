@@ -1,10 +1,6 @@
-$colors: map-merge($colors, (
-    form: (
-        input: #FFF,
-        placeholder: #999,
-        error: #C00
-    )
-));
+$form__background--input: #FFF !default;
+$form__color--placeholder: #999 !default;
+$form__color--error: #c60f13 !default;
 
 fieldset {
     margin: 0;
@@ -45,7 +41,7 @@ textarea {
     font-family: $base-font;
     font-size: size(body);
     resize: none;
-    background: color(input,form);
+    background: $form__background--input;
 
     .no-touch &:hover {
         border-color: darken(color(ui), 10%);
@@ -78,11 +74,11 @@ input[type=checkbox] {
 // Placeholder
 //
 input[placeholder] { text-overflow: ellipsis; }
-.defaultvalue { text-overflow: ellipsis; color: color(placeholder,form); }
-::-moz-placeholder { text-overflow: ellipsis; color: color(placeholder,form); }
-::-webkit-input-placeholder { text-overflow: ellipsis; color: color(placeholder,form); }
-input:-moz-placeholder { text-overflow: ellipsis; color: color(placeholder,form); }
-input:-ms-input-placeholder { text-overflow: ellipsis; color: color(placeholder,form); }
+.defaultvalue { text-overflow: ellipsis; color: $form__color--placeholder; }
+::-moz-placeholder { text-overflow: ellipsis; color: $form__color--placeholder; }
+::-webkit-input-placeholder { text-overflow: ellipsis; color: $form__color--placeholder; }
+input:-moz-placeholder { text-overflow: ellipsis; color: $form__color--placeholder; }
+input:-ms-input-placeholder { text-overflow: ellipsis; color: $form__color--placeholder; }
 
 
 //
@@ -97,13 +93,13 @@ input:-ms-input-placeholder { text-overflow: ellipsis; color: color(placeholder,
 }
 
 .validation_error {
-    border-color: color(error,form);
+    border-color: $form__color--error;
 }
 
 .validation_field_message {
     display: block;
     padding: 0 0 0 5px;
-    color: color(error,form);
+    color: $form__color--error;
 }
 
 
