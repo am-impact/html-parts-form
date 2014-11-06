@@ -119,6 +119,8 @@ form {
         @include grid-row( $behavior: collapse );
 
         .label {
+            text-align: right;
+
             @include grid-column(
                 $columns: 4
             );
