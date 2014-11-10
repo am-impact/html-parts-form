@@ -53,6 +53,10 @@ textarea {
     }
 }
 
+input[type=number] {
+    max-width: 100px;
+}
+
 select {
     padding: 5px;
     line-height: 10px;
