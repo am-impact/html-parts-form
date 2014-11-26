@@ -97,7 +97,7 @@ input:-ms-input-placeholder { text-overflow: ellipsis; color: $form__color--plac
 }
 
 .validation_error {
-    border-color: $form__color--error;
+    border-color: $form__color--error !important;
 }
 
 .validation_field_message {
