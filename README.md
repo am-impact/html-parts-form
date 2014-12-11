@@ -3,7 +3,7 @@
 Uitbreiding op [html startup](https://github.com/am-impact/html-startup)
 
 ## Bestanden
- * scss/components/_buttons.scss
+ * scss/components/_button.scss
  * scss/components/_form.scss
  * kit/includes/_contactform.kit
 
