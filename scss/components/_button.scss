@@ -1,13 +1,22 @@
+$button__background: color(primary);
+$button__background--secondary: #EEE;
+
+$button__color: #FFF;
+$button__color--secondary: color(text);
+
+$button__padding: 9px 16px;
+$button__padding--large: 14px 21px;
+
 .button {
     @include inline;
     position: relative;
     width: auto;
-    padding: 9px 16px;
+    padding: $button__padding;
     margin: 0;
     border: {
         width: 1px;
         style: solid;
-        color: color(primary);
+        color: $button__background;
         radius: size(radius);
     }
     line-height: 1;
@@ -20,15 +29,15 @@
         align: center;
         decoration: none;
     }
-    color: #FFF !important;
-    background-color: color(primary);
+    color: $button__color;
+    background-color: $button__background;
     cursor: pointer;
     @include transition( all 0.2s ease-in-out );
 
     .no-touch &:hover,
     &:focus {
-        color: #FFF;
-        background-color: lighten(color(primary),10%);
+        color: $button__color;
+        background-color: lighten($button__background,10%);
     }
 
     &:active,
@@ -41,11 +50,11 @@
     // Secondary
     //
     &--secondary {
-        color: color(primary) !important;
-        background-color: #FFF;
+        color: $button__color--secondary;
+        background-color: $button__background--secondary;
 
         .no-touch &:hover {
-            background-color: #EEE;
+            background-color: lighten($button__background--secondary, 5%);
         }
     }
 
@@ -54,7 +63,7 @@
     // Large
     //
     &--large {
-        padding: 26px 42px;
+        padding: $button__padding--large;
         font-size: size(h3);
     }
 
