@@ -92,7 +92,6 @@ input:-ms-input-placeholder { text-overflow: ellipsis; color: $form__color--plac
     &:after {
         content: '\002A';
         padding: 0 0 0 5px;
-        font-weight: bold;
     }
 }
 
