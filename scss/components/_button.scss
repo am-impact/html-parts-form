@@ -8,7 +8,7 @@ $button__padding: 9px 16px;
 $button__padding--large: 14px 21px;
 
 .button {
-    @include inline;
+    display: inline-block;
     position: relative;
     width: auto;
     padding: $button__padding;
@@ -32,7 +32,7 @@ $button__padding--large: 14px 21px;
     color: $button__color;
     background-color: $button__background;
     cursor: pointer;
-    @include transition( all 0.2s ease-in-out );
+    transition: all 0.2s ease-in-out;
 
     .no-touch &:hover,
     &:focus {
